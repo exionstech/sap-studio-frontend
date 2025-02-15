@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -31,13 +32,13 @@ const NavItems = () => {
           (pathname.startsWith(item.link) && item.link !== "/");
         
         return (
-          <div key={item.link}>
+          <div key={item.link} className="w-full md:w-auto">
             {/* Desktop Link */}
             <Link
               href={item.link}
               className={cn(
                 "text-green4 font-medium md:flex hidden py-1",
-                active && "text-green3 border-[1px] border-green3"
+                active && "text-green3 border-b-[2px] border-green3"
               )}
             >
               {item.name}
@@ -46,8 +47,8 @@ const NavItems = () => {
             <Link
               href={item.link}
               className={cn(
-                "text-green4 font-medium md:hidden p-2 rounded-lg flex justify-center items-center bg-green1",
-                active && "text-green3 border-[1px] border-green3 bg-green-200"
+                "text-green4 font-medium md:hidden p-2 rounded-lg flex justify-center items-center w-full bg-green1/40",
+                active && "text-green3 border-b-[2px] border-green3 bg-green1"
               )}
             >
               {item.name}

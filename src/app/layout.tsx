@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/shared/navbar";
 
 
 const larkenDemo = localFont({
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body
         className="font-poppins antialiased w-full h-full min-h-screen scroll-smooth mx-auto bg-[#F9FBF4]"
       >
+        <Navbar/>
         {children}
         <Toaster />
       </body>

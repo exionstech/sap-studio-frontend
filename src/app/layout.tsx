@@ -38,7 +38,7 @@ export default function RootLayout({
       className={`${larkenDemo.variable} ${poppins.variable}`}
     >
       <body
-        className="font-poppins antialiased w-full h-full min-h-screen scroll-smooth mx-auto"
+        className="font-poppins antialiased w-full h-full min-h-screen scroll-smooth mx-auto bg-[#F9FBF4]"
       >
         {children}
         <Toaster />

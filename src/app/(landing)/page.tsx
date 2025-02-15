@@ -4,7 +4,7 @@ import LandingHero from "../(landing)/_components/hero";
 
 const LandingPage = () => {
   return (
-    <MaxWrapper className="flex flex-col gap-10 mt-[6.5rem]">
+    <MaxWrapper className="flex flex-col gap-10 mt-[5rem]">
       <LandingHero />
     </MaxWrapper>
   );

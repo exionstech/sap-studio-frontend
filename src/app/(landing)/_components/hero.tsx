@@ -4,7 +4,7 @@ import React from "react";
 
 const LandingHero = () => {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto px-5 md:px-14 flex md:flex-row flex-col gap-5">
+    <div className="w-full max-w-screen-2xl mx-auto px-5 md:px-14 flex md:flex-row flex-col gap-5 pt-10">
       <div className="w-full lg:w-[50%] md:w-[60%] flex flex-col gap-10">
         <h1 className="font-larken-demo text-5xl lg:text-6xl">Decode Nature&apos;s <br /> Secret <span className="text-green3">Symphony</span></h1>
         <div className="flex flex-col gap-5 border-l-[2px] border-green4 pl-3">
@@ -12,7 +12,7 @@ const LandingHero = () => {
           <Button className="w-fit">Learn More</Button>
         </div>
       </div>
-      <div className="w-full lg:w-[50%] md:w-[40%] flex items-end md:pt-[4.5rem] justify-end">
+      <div className="w-full lg:w-[50%] md:w-[40%] flex items-end md:pt-[3.5rem] justify-end">
           <Image
             src="/landing/hero/hero.png"
             alt="hero"

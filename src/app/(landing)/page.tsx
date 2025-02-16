@@ -5,6 +5,7 @@ import OverView from "./_components/overview";
 import OurProduct from "./_components/our-product";
 import AboutUs from "./_components/about-us";
 import HowItWorks from "./_components/how-it-works";
+import Technologies from "./_components/technologies";
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
       <OurProduct/>
       <AboutUs/>
       <HowItWorks/>
+      <Technologies/>
     </MaxWrapper>
   );
 };

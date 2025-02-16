@@ -9,7 +9,7 @@ const MobileNav = () => {
   return (
     <Sheet>
         <SheetTrigger>
-        <AlignJustify className="h-8 w-8 shrink-0" />
+        <AlignJustify className="h-8 w-8 shrink-0" color='#2C3221' />
       </SheetTrigger>
       <SheetContent className='py-16 flex flex-col gap-14' side={"left"}>
         <div className="flex items-center justify-center">

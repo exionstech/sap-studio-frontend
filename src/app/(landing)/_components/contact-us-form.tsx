@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { PhoneInput } from "@/components/shared/number-input";
 
 const contactFormSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -45,7 +46,6 @@ const ContactForm = () => {
 
   const onSubmit = (data: ContactFormValues) => {
     console.log("Form submitted:", data);
-    // Handle form submission here
   };
 
   return (
@@ -115,10 +115,10 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel className="text-[#414651]">Phone number</FormLabel>
               <FormControl>
-                <Input
-                  className="bg-white"
-                  placeholder="+1 (555) 000-0000"
-                  type="tel"
+                <PhoneInput
+                  className="bg-white rounded-lg"
+                  placeholder="Enter phone number"
+                  defaultCountry="US"
                   {...field}
                 />
               </FormControl>

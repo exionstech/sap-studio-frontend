@@ -50,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -60,7 +60,7 @@ const ContactForm = () => {
                 <FormLabel className="text-[#414651]">First name</FormLabel>
                 <FormControl>
                   <Input
-                    className="bg-white"
+                    className="bg-white h-12"
                     placeholder="First name"
                     {...field}
                   />
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 <FormLabel className="text-[#414651]">Last name</FormLabel>
                 <FormControl>
                   <Input
-                    className="bg-white"
+                    className="bg-white  h-12"
                     placeholder="Last name"
                     {...field}
                   />
@@ -97,7 +97,7 @@ const ContactForm = () => {
               <FormLabel className="text-[#414651]">Email</FormLabel>
               <FormControl>
                 <Input
-                  className="bg-white"
+                  className="bg-white  h-12"
                   placeholder="you@company.com"
                   type="email"
                   {...field}
@@ -116,7 +116,7 @@ const ContactForm = () => {
               <FormLabel className="text-[#414651]">Phone number</FormLabel>
               <FormControl>
                 <PhoneInput
-                  className="bg-white rounded-lg"
+                  className="bg-white rounded-lg  h-12"
                   placeholder="Enter phone number"
                   defaultCountry="US"
                   {...field}

@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/shared/navbar";
+import Footer from "@/components/shared/footer";
 
 
 const larkenDemo = localFont({
@@ -43,6 +44,7 @@ export default function RootLayout({
       >
         <Navbar/>
         {children}
+        <Footer/>
         <Toaster />
       </body>
     </html>

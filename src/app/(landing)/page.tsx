@@ -9,6 +9,7 @@ import Technologies from "./_components/technologies";
 import { Testimonials } from "@/components/shared/testimonials";
 import FaqSection from "@/components/shared/faq";
 import ExperienceNow from "./_components/expereience";
+import ContactUs from "./_components/contact-us";
 
 const LandingPage = () => {
   return (
@@ -22,6 +23,7 @@ const LandingPage = () => {
       <Testimonials/>
       <FaqSection/>
       <ExperienceNow/>
+      <ContactUs/>
     </MaxWrapper>
   );
 };

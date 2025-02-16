@@ -6,6 +6,8 @@ import OurProduct from "./_components/our-product";
 import AboutUs from "./_components/about-us";
 import HowItWorks from "./_components/how-it-works";
 import Technologies from "./_components/technologies";
+import { Testimonials } from "@/components/shared/testimonials";
+import FaqSection from "@/components/shared/faq";
 
 const LandingPage = () => {
   return (
@@ -16,6 +18,8 @@ const LandingPage = () => {
       <AboutUs/>
       <HowItWorks/>
       <Technologies/>
+      <Testimonials/>
+      <FaqSection/>
     </MaxWrapper>
   );
 };

@@ -98,7 +98,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
                   >
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{item.content}</p>
+                  <p className="text-sm text-gray1">{item.content}</p>
                 </div>
                 <div
                   className={cn(

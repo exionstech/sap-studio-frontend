@@ -1,5 +1,6 @@
 import HeadingText from '@/components/shared/heading-text'
 import React from 'react'
+import ContactForm from './contact-us-form'
 
 const ContactUs = () => {
   return (
@@ -7,7 +8,7 @@ const ContactUs = () => {
         <div className="bg-green2 p-10 flex flex-col gap-10">
                 <HeadingText section={'CONTACT US'} heading={'Let’s Start Your Sustainability Journey'}/>
                 <div className="w-full">
-                        {/* form here */}
+                        <ContactForm/>
                 </div>
         </div>
     </section>

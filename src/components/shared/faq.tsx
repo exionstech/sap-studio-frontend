@@ -49,9 +49,9 @@ const FaqSection = ({ className }: FaqSectionProps) => {
               className="bg-[#f2f2f2] data-[state=open]:bg-green2 rounded-lg transition-colors duration-200"
             >
               <AccordionTrigger className="px-4">
-                <span className="text-green4 font-medium">{item.title}</span>
+                <span className="text-green4 font-medium text-start">{item.title}</span>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 px-4">
+              <AccordionContent className="text-gray1 px-4">
                 {item.content}
               </AccordionContent>
             </AccordionItem>

@@ -80,7 +80,7 @@ const VideoPlayer = (
 
   if (isLoading) {
     return (
-      <div className="relative w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden bg-green1/70">
+      <div className={cn("relative w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden", className)}>
         <Skeleton className="w-full h-full" />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
           <Loader className="w-10 h-10 text-green3 animate-spin" />

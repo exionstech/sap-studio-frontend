@@ -4,6 +4,7 @@ import LandingHero from "../(landing)/_components/hero";
 import OverView from "./_components/overview";
 import OurProduct from "./_components/our-product";
 import AboutUs from "./_components/about-us";
+import HowItWorks from "./_components/how-it-works";
 
 const LandingPage = () => {
   return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <OverView/>
       <OurProduct/>
       <AboutUs/>
+      <HowItWorks/>
     </MaxWrapper>
   );
 };

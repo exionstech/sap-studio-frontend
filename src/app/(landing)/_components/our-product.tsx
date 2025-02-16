@@ -10,7 +10,7 @@ const OurProduct = () => {
         heading={"A glimpse of Sap Symphony"}
       />
       <div className="w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden">
-        <VideoPlayer src="/landing/video2.mp4"/>
+        <VideoPlayer src="/landing/video/video2.mp4"/>
       </div>
     </section>
   );

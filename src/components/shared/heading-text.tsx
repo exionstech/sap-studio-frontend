@@ -22,7 +22,7 @@ const HeadingText = ({
         <span className={cn(sectionClass)}>{section}</span>
         <div className="w-10 h-[2px] bg-green4 md:hidden" />
       </div>
-      <h1 className={cn("font-larken-demo text-4xl text-center md:text-start", headingClass)}>
+      <h1 className={cn("font-larken-demo font-medium text-4xl text-center md:text-start", headingClass)}>
         {heading}
       </h1>
     </div>

@@ -1,5 +1,5 @@
 import HeadingText from "@/components/shared/heading-text";
-// import VideoPlayer from "@/components/shared/video-player";
+import VideoPlayer from "@/components/shared/video-player";
 import React from "react";
 
 const OurProduct = () => {
@@ -10,7 +10,7 @@ const OurProduct = () => {
         heading={"A glimpse of Sap Symphony"}
       />
       <div className="w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden">
-        {/* <VideoPlayer src="/landing/video2.mp4"/> */}
+        <VideoPlayer src="/landing/video2.mp4"/>
       </div>
     </section>
   );

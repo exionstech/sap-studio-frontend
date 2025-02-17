@@ -34,6 +34,7 @@ const accordionItems = [
 const FaqSection = ({ className }: FaqSectionProps) => {
   return (
     <section
+    id="faq"
       className={cn(
         "w-full max-w-screen-2xl px-5 md:px-14 mx-auto flex flex-col gap-10 items-center",
         className

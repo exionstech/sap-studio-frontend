@@ -27,11 +27,11 @@ const AboutUs = () => {
         <div className="md:w-[70%] w-full p-8 rounded-xl bg-white flex flex-col gap-5">
           <HeadingText section={"About Us"} heading={"Giving Nature a Voice"} />
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2 text-center md:text-start">
+            <div className="flex flex-col gap-2 text-center md:text-start select-none pointer-events-none">
               <h1 className="text-green4 text-xl font-medium">Our Mission</h1>
               <p className="text-gray1">Our mission is to amplify the connection between humans and the natural world. Through the creation of pioneering generative music and art over the last decade, we've developed technology that allows anyone to tune into nature with plant music.</p>
             </div>
-            <div className="flex flex-col gap-2 text-center md:text-start">
+            <div className="flex flex-col gap-2 text-center md:text-start select-none pointer-events-none">
               <h1 className="text-green4 text-xl font-medium">Our Vision</h1>
               <p className="text-gray1">At Sap Symphony, we bridge the gap between nature and technology, transforming plant signals into a symphony you can hear and feel.</p>
             </div>

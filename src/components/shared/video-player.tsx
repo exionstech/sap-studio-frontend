@@ -5,15 +5,16 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from '@/lib/utils';
 
 interface VideoPlayerProps {
-        src: string;
-        className?: string;
+  src: string;
+  className?: string;
 }
 
 const VideoPlayer = (
-        { src, className }: VideoPlayerProps
+  { src, className }: VideoPlayerProps
 ) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isEnded, setIsEnded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
@@ -37,11 +38,12 @@ const VideoPlayer = (
 
     const handleEnded = () => {
       setIsPlaying(false);
+      setIsEnded(true);
     };
 
-    // Using onplay and onpause event listeners instead of addEventListener
     video.onplay = () => {
       setIsPlaying(true);
+      setIsEnded(false);
     };
 
     video.onpause = () => {
@@ -68,6 +70,7 @@ const VideoPlayer = (
         }
         await video.play();
         setIsPlaying(true);
+        setIsEnded(false);
       } else {
         video.pause();
         setIsPlaying(false);
@@ -90,7 +93,7 @@ const VideoPlayer = (
   }
 
   return (
-    <div className={cn("relative w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden group", className)}>
+    <div className={cn("relative w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden", className)}>
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
@@ -99,10 +102,16 @@ const VideoPlayer = (
       />
       <button
         onClick={togglePlay}
-        className="absolute inset-0 w-full h-full flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className={cn(
+          "absolute inset-0 w-full h-full flex items-center justify-center",
+          isPlaying ? "bg-black/20 opacity-0 hover:opacity-100" : "bg-black/20"
+        )}
       >
-        <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110">
-          {isPlaying ? (
+        <div className={cn(
+          "w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110",
+          isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
+        )}>
+          {isPlaying && !isEnded ? (
             <Pause className="w-7 h-7 text-green4" />
           ) : (
             <Play className="w-7 h-7 text-green4 ml-1" />

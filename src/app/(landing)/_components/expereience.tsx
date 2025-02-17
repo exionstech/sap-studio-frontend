@@ -14,6 +14,8 @@ const ExperienceNow = () => {
             headingClass="text-white"
             sectionClass="text-white"
             leftlineClass="bg-white"
+            rightlineClass="bg-white"
+            
           />
           <Link
             href={"/"}

@@ -7,7 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/shared/navbar";
 import Footer from "@/components/shared/footer";
 import CopyRight from "@/components/shared/copy-right";
-
+import { VideoProvider } from "@/components/shared/video-context";
 
 const larkenDemo = localFont({
   src: "./fonts/larken-demo.ttf",
@@ -36,18 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html 
-      lang="en"
-      className={`${larkenDemo.variable} ${poppins.variable}`}
-    >
-      <body
-        className="font-poppins antialiased w-full h-full min-h-screen scroll-smooth mx-auto bg-[#F9FBF4]"
-      >
-        <Navbar/>
-        {children}
-        <Footer/>
-        <CopyRight/>
-        <Toaster />
+    <html lang="en" className={`${larkenDemo.variable} ${poppins.variable}`}>
+      <body className="font-poppins antialiased w-full h-full min-h-screen scroll-smooth mx-auto bg-[#F9FBF4]">
+        <VideoProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <CopyRight />
+          <Toaster />
+        </VideoProvider>
       </body>
     </html>
   );

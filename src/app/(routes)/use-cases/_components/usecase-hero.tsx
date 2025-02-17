@@ -15,9 +15,9 @@ const UsecaseHero = ({ className }: UsecaseHeroProps) => {
       )}
     >
       <div className="w-full md:w-[60%] flex flex-col md:justify-center md:items-start items-center gap-10">
-        <h1 className="text-4xl lg:text-6xl text-green4 font-larken-demo md:text-start text-center">
+        <h1 className="text-4xl lg:text-6xl text-green4 font-larken-demo md:text-start text-center select-none pointer-events-none">
           How Can You Use <br />{" "}
-          <span className="text-green3 select-none pointer-events-none">Sap Symphony in</span>
+          <span className="text-green3">Sap Symphony in</span>
           <br /> Your Life
         </h1>
         <p className="text-green4 md:text-start text-center select-none pointer-events-none">

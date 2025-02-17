@@ -1,14 +1,14 @@
 import { MaxWrapper } from '@/components/shared/max-wrapper'
+import AboutHero from './_components/about-hero'
+import ExperienceNow from '@/components/shared/expereience'
 
 const AboutPage = () => {
   return (
-    <MaxWrapper>
-      <div className="min-h-screen flex items-center justify-center">
-      <h1>About</h1>
-      <p>This is the about page</p>
-      </div>
+    <MaxWrapper className='flex flex-col mb-12'>
+      <AboutHero/>
+      <ExperienceNow className='mt-14'/>
     </MaxWrapper>
   )
 }
 
-export default AboutPage
+export default AboutPage;

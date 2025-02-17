@@ -19,10 +19,10 @@ const HeadingText = ({
     <div className="flex flex-col gap-4 w-full">
       <div className="flex gap-3 items-center justify-center md:justify-start">
         <div className={cn("w-10 h-[2px] bg-green4", leftlineClass)} />
-        <span className={cn(sectionClass)}>{section}</span>
+        <span className={cn("select-none pointer-events-none",sectionClass)}>{section}</span>
         <div className="w-10 h-[2px] bg-green4 md:hidden" />
       </div>
-      <h1 className={cn("font-larken-demo font-medium text-4xl text-center md:text-start", headingClass)}>
+      <h1 className={cn("font-larken-demo font-medium text-4xl text-center md:text-start select-none pointer-events-none", headingClass)}>
         {heading}
       </h1>
     </div>

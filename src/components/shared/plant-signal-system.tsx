@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -106,7 +106,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
                     activeIndex === index && "bg-white text-green4"
                   )}
                 >
-                  <ChevronDown
+                  <ArrowDownRight
                     className={cn(
                       "w-5 h-5 transition-transform duration-200",
                       activeIndex === index && "rotate-180"

@@ -6,6 +6,7 @@ interface HeadingTextProps {
   sectionClass?: string;
   headingClass?: string;
   leftlineClass?: string;
+  rightlineClass?: string;
 }
 
 const HeadingText = ({
@@ -14,13 +15,14 @@ const HeadingText = ({
   sectionClass,
   headingClass,
   leftlineClass,
+  rightlineClass
 }: HeadingTextProps) => {
   return (
     <div className="flex flex-col gap-4 w-full">
       <div className="flex gap-3 items-center justify-center md:justify-start">
         <div className={cn("w-10 h-[2px] bg-green4", leftlineClass)} />
         <span className={cn("select-none pointer-events-none",sectionClass)}>{section}</span>
-        <div className="w-10 h-[2px] bg-green4 md:hidden" />
+        <div className={cn("w-10 h-[2px] bg-green4 md:hidden", rightlineClass)} />
       </div>
       <h1 className={cn("font-larken-demo font-medium text-4xl text-center md:text-start select-none pointer-events-none", headingClass)}>
         {heading}

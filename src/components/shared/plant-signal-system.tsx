@@ -93,12 +93,12 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
               <div className="flex gap-4 items-center">
                 <div className="flex-1 space-y-2">
                   <h3
-                    className="text-lg font-semibold"
+                    className="text-lg font-semibold select-none pointer-events-none"
                     style={{ color: GREEN_COLORS.green4 }}
                   >
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray1">{item.content}</p>
+                  <p className="text-sm text-gray1 select-none pointer-events-none">{item.content}</p>
                 </div>
                 <div
                   className={cn(
@@ -125,7 +125,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
           alt={accordionData[activeIndex].title}
           width={300}
           height={300}
-          className="object-cover w-full h-full shrink-0"
+          className="object-cover w-full h-full shrink-0 overflow-hidden select-none pointer-events-none"
         />
       </div>
     </div>

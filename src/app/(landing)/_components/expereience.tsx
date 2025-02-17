@@ -14,6 +14,8 @@ const ExperienceNow = () => {
             headingClass="text-white"
             sectionClass="text-white"
             leftlineClass="bg-white"
+            rightlineClass="bg-white"
+            
           />
           <Link
             href={"/"}
@@ -28,7 +30,7 @@ const ExperienceNow = () => {
             alt="experience-now"
             width={600}
             height={600}
-            className="shrink-0 object-cover"
+            className="shrink-0 object-cover select-none pointer-events-none"
           />
         </div>
         <div className="w-full flex justify-end md:hidden absolute top-0 ring-0">
@@ -37,7 +39,7 @@ const ExperienceNow = () => {
             alt="experience-now"
             width={600}
             height={600}
-            className="shrink-0 object-cover"
+            className="shrink-0 object-cover select-none pointer-events-none"
           />
         </div>
       </div>

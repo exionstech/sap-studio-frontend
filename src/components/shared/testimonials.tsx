@@ -35,7 +35,7 @@ const TestimonialsColumn = (props: {
                 className="p-5 bg-green5 rounded-md max-w-sm w-full"
                 key={name}
               >
-                <div className="text-white/80 tracking-wide text-[14px]">
+                <div className="text-white/80 tracking-wide text-[14px] select-none pointer-events-none">
                   {text}
                 </div>
                 <div className="flex items-center gap-2 mt-3">
@@ -44,10 +44,10 @@ const TestimonialsColumn = (props: {
                     alt={name}
                     width={40}
                     height={40}
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-10 rounded-full select-none pointer-events-none"
                   />
                   <div className="flex flex-col">
-                    <div className="text-white/80 tracking-tight leading-5 nunito">
+                    <div className="text-white/80 tracking-tight leading-5 nunito select-none pointer-events-none">
                       {name}
                     </div>
                   </div>

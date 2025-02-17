@@ -169,7 +169,7 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="w-full bg-green6 text-white hover:bg-green6/80"
+          className="w-full py-6 bg-green6 text-white hover:bg-green6/80"
         >
           Send Message
         </Button>

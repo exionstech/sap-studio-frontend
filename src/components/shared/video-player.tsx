@@ -3,20 +3,20 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Loader } from 'lucide-react';
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from '@/lib/utils';
+import { useVideo } from './video-context';
 
 interface VideoPlayerProps {
   src: string;
   className?: string;
 }
 
-const VideoPlayer = (
-  { src, className }: VideoPlayerProps
-) => {
+const VideoPlayer = ({ src, className }: VideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isEnded, setIsEnded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
+  const { activeVideoId, setActiveVideoId } = useVideo();
 
   // Initial loading timer
   useEffect(() => {
@@ -31,6 +31,14 @@ const VideoPlayer = (
     };
   }, []);
 
+  // Stop playing when another video becomes active
+  useEffect(() => {
+    if (activeVideoId !== src && isPlaying && videoRef.current) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  }, [activeVideoId, src, isPlaying]);
+
   // Video event handlers
   useEffect(() => {
     const video = videoRef.current;
@@ -39,6 +47,7 @@ const VideoPlayer = (
     const handleEnded = () => {
       setIsPlaying(false);
       setIsEnded(true);
+      setActiveVideoId(null);
     };
 
     video.onplay = () => {
@@ -48,6 +57,9 @@ const VideoPlayer = (
 
     video.onpause = () => {
       setIsPlaying(false);
+      if (activeVideoId === src) {
+        setActiveVideoId(null);
+      }
     };
 
     video.addEventListener('ended', handleEnded);
@@ -57,7 +69,7 @@ const VideoPlayer = (
       video.onpause = null;
       video.removeEventListener('ended', handleEnded);
     };
-  }, []);
+  }, [src, setActiveVideoId, activeVideoId]);
 
   const togglePlay = async () => {
     const video = videoRef.current;
@@ -68,16 +80,19 @@ const VideoPlayer = (
         if (video.ended) {
           video.currentTime = 0;
         }
+        setActiveVideoId(src);
         await video.play();
         setIsPlaying(true);
         setIsEnded(false);
       } else {
         video.pause();
         setIsPlaying(false);
+        setActiveVideoId(null);
       }
     } catch (error) {
       console.error('Error toggling video playback:', error);
       setIsPlaying(false);
+      setActiveVideoId(null);
     }
   };
 

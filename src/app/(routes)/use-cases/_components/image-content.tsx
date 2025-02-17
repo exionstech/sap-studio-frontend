@@ -17,7 +17,7 @@ const ImageContent = ({
   return (
     <div
       className={cn(
-        "w-full flex flex-col md:flex-row gap-10 md:aspect-[3/1]",
+        "w-full flex flex-col md:flex-row gap-10 md:aspect-[3/1] lg:aspect-[4/1]",
         className
       )}
     >
@@ -25,8 +25,8 @@ const ImageContent = ({
         <Image
           src={imgSrc}
           alt={heading}
-          width={500}
-          height={500}
+          width={600}
+          height={600}
           className="object-cover shrink-0"
         />
       </div>

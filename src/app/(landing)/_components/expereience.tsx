@@ -6,15 +6,18 @@ import React from "react";
 const ExperienceNow = () => {
   return (
     <section className="w-full max-w-screen-2xl mx-auto px-5 md:px-14">
-      <div className="flex md:flex-row flex-col-reverse gap-6 md:justify-between rounded-xl bg-green2 lg:aspect-[3/1] md:aspect-[5/2] overflow-hidden relative">
-        <div className="w-full md:w-[55%] p-16 flex items-center justify-center flex-col gap-5">
+      <div className="flex md:flex-row flex-col-reverse gap-6 md:justify-between rounded-xl bg-green6 lg:aspect-[3/1] md:aspect-[5/2] overflow-hidden relative">
+        <div className="w-full md:w-[55%] p-16 flex items-center md:items-start justify-center flex-col gap-5">
           <HeadingText
             section={"EXPERIENCE NOW"}
             heading={"Ready to Experience Plant Music?"}
+            headingClass="text-white"
+            sectionClass="text-white"
+            leftlineClass="bg-white"
           />
           <Link
             href={"/"}
-            className="text-white font-medium bg-green4 rounded-md py-2 px-6 flex w-fit items-center"
+            className="text-grren4 font-medium bg-white rounded-md py-2 px-6 flex w-fit items-center"
           >
             Shop Now
           </Link>

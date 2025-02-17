@@ -88,7 +88,7 @@ const Footer = () => {
                   : info@sapsymphony.in
                 </a>
               </div>
-              <div className="flex gap-1 items-center">
+              <div className="flex gap-1">
                 <MapPin className="text-green4 w-5 h-5" />
                 <a
                   href="123 Greenway Blvd, EcoCity, EC 45678"

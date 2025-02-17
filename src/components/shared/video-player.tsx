@@ -112,9 +112,9 @@ const VideoPlayer = (
           isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
         )}>
           {isPlaying && !isEnded ? (
-            <Pause className="w-7 h-7 text-green4" />
+            <Pause className="w-7 h-7 text-green4"/>
           ) : (
-            <Play className="w-7 h-7 text-green4 ml-1" />
+            <Play className="w-7 h-7 text-green4 ml-1"/>
           )}
         </div>
       </button>

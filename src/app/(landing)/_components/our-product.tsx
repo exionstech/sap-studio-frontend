@@ -1,6 +1,12 @@
 import HeadingText from "@/components/shared/heading-text";
-import VideoPlayer from "@/components/shared/video-player";
+import VideoSwiper from "@/components/shared/video-swiper";
 import React from "react";
+
+const videos = [
+  "/landing/video/video1.mp4",
+  "/landing/video/video2.mp4",
+  "/landing/video/video3.mp4"
+];
 
 const OurProduct = () => {
   return (
@@ -9,9 +15,7 @@ const OurProduct = () => {
         section={"Our Product"}
         heading={"A glimpse of Sap Symphony"}
       />
-      <div className="w-full md:aspect-[3/1] aspect-[4/3] rounded-xl overflow-hidden">
-        <VideoPlayer src="/landing/video/video2.mp4"/>
-      </div>
+      <VideoSwiper videos={videos} />
     </section>
   );
 };

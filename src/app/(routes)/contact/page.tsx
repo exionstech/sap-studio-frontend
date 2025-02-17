@@ -1,5 +1,5 @@
 import ContactUs from '@/app/(landing)/_components/contact-us'
-import ExperienceNow from '@/app/(landing)/_components/expereience'
+import ExperienceNow from '@/components/shared/expereience'
 import { MaxWrapper } from '@/components/shared/max-wrapper'
 import React from 'react'
 

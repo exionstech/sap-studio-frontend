@@ -8,7 +8,7 @@ import HowItWorks from "./_components/how-it-works";
 import Technologies from "./_components/technologies";
 import { Testimonials } from "@/components/shared/testimonials";
 import FaqSection from "@/components/shared/faq";
-import ExperienceNow from "./_components/expereience";
+import ExperienceNow from "../../components/shared/expereience";
 
 const LandingPage = () => {
   return (

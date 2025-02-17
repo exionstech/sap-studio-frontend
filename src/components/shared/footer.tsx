@@ -64,7 +64,7 @@ const Footer = () => {
             <h1 className="text-xl text-green4 font-medium">Navigation</h1>
             <div className="flex flex-col gap-1">
               {navigation.map((item, index) => (
-                <Link key={index} href={item.href} className="text-gray1">
+                <Link key={index} href={item.href} className="text-gray1 text-sm">
                   {item.name}
                 </Link>
               ))}
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="flex flex-col gap-1">
               <div className="flex gap-1 items-center">
                 <Phone className="text-green4 w-5 h-5" />
-                <a href="tel:+91 9876543210" className="text-gray1">
+                <a href="tel:+91 9876543210" className="text-gray1 text-sm">
                  : +91 9876543210
                 </a>
               </div>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <Mail className="text-green4 w-5 h-5" />
                 <a
                   href="mailto:mailto:info@sapsymphony.in"
-                  className="text-gray1"
+                  className="text-gray1 text-sm"
                 >
                   : info@sapsymphony.in
                 </a>
@@ -92,7 +92,7 @@ const Footer = () => {
                 <MapPin className="text-green4 w-5 h-5" />
                 <a
                   href="123 Greenway Blvd, EcoCity, EC 45678"
-                  className="text-gray1"
+                  className="text-gray1 text-sm"
                 >
                   : 123 Greenway Blvd, EcoCity, EC 45678
                 </a>

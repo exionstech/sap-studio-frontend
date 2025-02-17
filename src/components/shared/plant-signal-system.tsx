@@ -125,7 +125,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
           alt={accordionData[activeIndex].title}
           width={300}
           height={300}
-          className="object-cover w-full h-full shrink-0"
+          className="object-cover w-full h-full shrink-0 overflow-hidden select-none pointer-events-none"
         />
       </div>
     </div>

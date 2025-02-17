@@ -8,7 +8,7 @@ const Technologies = () => {
     <section className="w-full max-w-screen-2xl mx-auto px-4 md:px-14 flex flex-col gap-10">
       <div className="flex flex-col gap-5">
         <HeadingText
-          section={"Science behing it"}
+          section={"Science behind it"}
           heading={"From Electrical Signals to Wondrous Music"}
         />
         <p className="text-green3 text-center md:text-start md:w-[70%]">

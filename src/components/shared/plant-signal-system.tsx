@@ -93,12 +93,12 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
               <div className="flex gap-4 items-center">
                 <div className="flex-1 space-y-2">
                   <h3
-                    className="text-lg font-semibold"
+                    className="text-lg font-semibold select-none pointer-events-none"
                     style={{ color: GREEN_COLORS.green4 }}
                   >
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray1">{item.content}</p>
+                  <p className="text-sm text-gray1 select-none pointer-events-none">{item.content}</p>
                 </div>
                 <div
                   className={cn(

@@ -9,16 +9,16 @@ const navItems = [
     link: "/",
   },
   {
-    name: "How it works",
-    link: "/works",
+    name: "Use Cases",
+    link: "/use-cases",
   },
   {
-    name: "Products",
-    link: "/products",
+    name: "About",
+    link: "/about",
   },
   {
-    name: "FAQs",
-    link: "#faqs",
+    name: "Contact",
+    link: "/contact",
   },
 ];
 

@@ -137,13 +137,13 @@ const VideoSwiper = ({ videos, className }: VideoSwiperProps) => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 h-8 w-8 md:w-10 md:h-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 opacity-70 hover:opacity-100 z-10"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 h-8 w-8 md:w-10 md:h-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 opacity-70 hover:opacity-100"
       >
         <ChevronLeft className="w-6 h-6 text-green4" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 h-8 w-8 md:w-10 md:h-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 opacity-70 hover:opacity-100 z-10"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 h-8 w-8 md:w-10 md:h-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 opacity-70 hover:opacity-100"
       >
         <ChevronRight className="w-6 h-6 text-green4" />
       </button>

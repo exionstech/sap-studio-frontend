@@ -10,7 +10,7 @@ const UsecaseHero = ({ className }: UsecaseHeroProps) => {
   return (
     <section
       className={cn(
-        "w-full max-w-screen-2xl mx-auto px-5 flex md:flex-row flex-col md:px-14 md:aspect-[3/1] gap-10 pt-5",
+        "w-full max-w-screen-2xl mx-auto px-5 flex md:flex-row flex-col md:px-14 md:aspect-[3/1] gap-10 md:justify-between pt-5",
         className
       )}
     >
@@ -25,7 +25,7 @@ const UsecaseHero = ({ className }: UsecaseHeroProps) => {
           Here are just some that our customers reported profound results with.
         </p>
       </div>
-      <div className="w-full md:w-[60%] flex items-center justify-center overflow-hidden rounded-lg">
+      <div className="w-full md:w-[40%] flex items-center justify-center overflow-hidden rounded-lg">
         <Image
           src="/use-cases/usecase-hero.png"
           alt="usecase-hero"

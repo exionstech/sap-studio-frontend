@@ -2,9 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 const LandingHero = () => {
+  const router = useRouter();
   const [showSkeleton, setShowSkeleton] = useState(true);
 
   useEffect(() => {
@@ -14,6 +16,12 @@ const LandingHero = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const onClick = () => {
+    router.push(process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK as string);
+  }
+
+
 
   return (
     <div className="w-full max-w-screen-2xl 2xl:aspect-[5/2] 2x:items-center 2xl:justify-center mx-auto px-5 md:px-14 flex md:flex-row flex-col gap-5 pt-10">
@@ -25,7 +33,7 @@ const LandingHero = () => {
           <p className="w-[90%] select-none pointer-events-none">
             Nature has always been singing—we just weren&apos;t listening. At Sap Symphony, we transform plant signals into mesmerizing soundscapes, unveiling the unseen rhythm of life. Step into a world where leaves whisper, roots hum, and the earth composes its own melody.
           </p>
-          <Button className="w-fit">Learn More</Button>
+          <Button onClick={onClick} className="w-fit hover:text-white">Learn More</Button>
         </div>
       </div>
       <div className="w-full lg:w-[50%] md:w-[40%] flex items-end md:pt-[3.5rem] justify-end">

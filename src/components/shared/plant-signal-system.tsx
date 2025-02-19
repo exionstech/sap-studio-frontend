@@ -84,7 +84,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSkeleton(false);
-    }, 1000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

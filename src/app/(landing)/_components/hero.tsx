@@ -10,7 +10,7 @@ const LandingHero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSkeleton(false);
-    }, 1000); // 1000ms = 1 second
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

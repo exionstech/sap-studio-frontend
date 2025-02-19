@@ -1,3 +1,4 @@
+"use clinet"
 import ImageContent from "./image-content"
 
 const CreativePersuits = () => {

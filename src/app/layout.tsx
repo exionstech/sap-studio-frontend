@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   title: "Sap Studio",
   description: "Decode Natures Secret Symphony",
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

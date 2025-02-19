@@ -46,7 +46,8 @@ const MobileNav = () => {
 
         <div className="mt-auto pt-8">
           <Link
-            href="/"
+            href={process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK as string}
+            target='_blank'
             className="w-full text-white font-medium bg-green4 rounded-lg py-3 px-4 flex items-center justify-center hover:bg-green4/90 transition-colors"
           >
             Shop Now

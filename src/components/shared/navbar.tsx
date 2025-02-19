@@ -13,7 +13,8 @@ const Navbar = () => {
           <NavItems />
         </div>
         <Link
-          href={"/"}
+          href={process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK as string}
+          target="_blank"
           className="text-white font-medium bg-green4 rounded-md py-2 px-6 md:flex w-fit items-center hidden"
         >
           Shop Now

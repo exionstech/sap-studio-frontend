@@ -12,7 +12,6 @@ const MobileNav = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const pathname = usePathname();
 
-  // Close sheet when route changes
   React.useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -46,7 +45,7 @@ const MobileNav = () => {
 
         <div className="mt-auto pt-8">
           <Link
-            href={process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK as string}
+            href={"/"}
             target='_blank'
             className="w-full text-white font-medium bg-green4 rounded-lg py-3 px-4 flex items-center justify-center hover:bg-green4/90 transition-colors"
           >

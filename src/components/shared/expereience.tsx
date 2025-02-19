@@ -14,11 +14,11 @@ const ExperienceNow = (
   return (
     <section className={cn("w-full max-w-screen-2xl mx-auto px-5 md:px-14", className)}>
       <div className="flex md:flex-row flex-col-reverse gap-6 md:justify-between rounded-xl bg-green6 lg:aspect-[3/1] md:aspect-[5/2] overflow-hidden relative">
-        <div className="w-full md:w-[55%] p-16 flex items-center md:items-start justify-center flex-col gap-5">
+        <div className="w-full md:w-[55%] p-16 flex items-start flex-col gap-5">
           <HeadingText
             section={"EXPERIENCE NOW"}
             heading={"Ready to Experience Plant Music?"}
-            headingClass="text-white"
+            headingClass="text-white text-start"
             sectionClass="text-white"
             leftlineClass="bg-white"
             rightlineClass="bg-white"

@@ -159,7 +159,14 @@ const ContactForm = () => {
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-[#414651]">
-                  You agree to our friendly privacy policy.
+                  You agree to our friendly {" "}
+                  <a 
+                  href="https://jaymabioinnovations.com/privacy-policy"
+                  className="underline"
+                  target="_blank"
+                  >
+                  privacy policy.
+                  </a>
                 </FormLabel>
                 <FormMessage />
               </div>

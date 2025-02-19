@@ -75,7 +75,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:flex-row gap-8 w-full mx-auto items-stretch",
+        "flex flex-col-reverse lg:flex-row gap-8 w-full mx-auto items-stretch",
         className
       )}
     >
@@ -125,7 +125,7 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
           alt={accordionData[activeIndex].title}
           width={300}
           height={300}
-          className="object-cover w-full h-full shrink-0 overflow-hidden select-none pointer-events-none"
+          className="object-cover w-full h-full 2xl:aspect-[4/5] shrink-0 overflow-hidden select-none pointer-events-none"
         />
       </div>
     </div>

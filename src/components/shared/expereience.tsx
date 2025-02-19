@@ -25,7 +25,7 @@ const ExperienceNow = (
             
           />
           <Link
-            href={process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK as string}
+            href={"/"}
             target="_blank"
             className="text-grren4 font-medium bg-white rounded-md py-2 px-6 flex w-fit items-center"
           >

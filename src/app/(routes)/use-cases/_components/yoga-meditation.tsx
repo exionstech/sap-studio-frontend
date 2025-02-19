@@ -1,4 +1,4 @@
-import React from 'react'
+"use client";
 import ImageContent from './image-content';
 
 const YogaMeditation = () => {

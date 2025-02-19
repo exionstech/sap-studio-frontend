@@ -1,5 +1,9 @@
+"use client";
+import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { Loader } from "lucide-react";
 import Image from "next/image";
+import React, { useState, useEffect } from "react";
 
 interface ImageContentProps {
   heading: string;
@@ -14,6 +18,16 @@ const ImageContent = ({
   imgSrc,
   className,
 }: ImageContentProps) => {
+  const [showSkeleton, setShowSkeleton] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSkeleton(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
       className={cn(
@@ -22,19 +36,31 @@ const ImageContent = ({
       )}
     >
       <div className="w-full md:w-[35%] overflow-hidden flex items-center justify-center rounded-lg">
-        <Image
-          src={imgSrc}
-          alt={heading}
-          width={600}
-          height={600}
-          className="object-cover shrink-0 select-none pointer-events-none"
-        />
+        {showSkeleton ? (
+          <>
+            <div className="relative w-full h-full">
+              <Skeleton className="w-full h-full animate-pulse bg-green1/30" />
+            </div>
+          </>
+        ) : (
+          <>
+            <Image
+              src={imgSrc}
+              alt={heading}
+              width={600}
+              height={600}
+              className="object-cover shrink-0 select-none pointer-events-none"
+            />
+          </>
+        )}
       </div>
       <div className="w-full bg-white md:w-[65%] flex flex-col gap-5 p-5 justify-center rounded-lg">
         <h2 className="text-3xl text-center md:text-start font-medium font-larken-demo text-green4 select-none pointer-events-none">
           {heading}
         </h2>
-        <p className="text-center md:text-start text-gray1 select-none pointer-events-none">{desc}</p>
+        <p className="text-center md:text-start text-gray1 select-none pointer-events-none">
+          {desc}
+        </p>
       </div>
     </div>
   );

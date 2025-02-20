@@ -40,10 +40,10 @@ const UsecaseHero = ({ className }: UsecaseHeroProps) => {
         {showSkeleton ? (
           <>
             <div className="2xl:hidden">
-              <Skeleton className="w-[350px] h-[350px] rounded-md animate-pulse bg-green1/20" />
+              <Skeleton className="w-[350px] h-[350px] rounded-md animate-pulse bg-green1/25" />
             </div>
             <div className="hidden 2xl:block">
-              <Skeleton className="w-[500px] h-[500px] rounded-md animate-pulse bg-green1/20" />
+              <Skeleton className="w-[500px] h-[500px] rounded-md animate-pulse bg-green1/25" />
             </div>
           </>
         ) : (

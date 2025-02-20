@@ -89,7 +89,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={item.link}
-                  className="text-gray1 text-sm"
+                  className="text-gray1 text-sm hover:underline"
                 >
                   {item.name}
                 </Link>

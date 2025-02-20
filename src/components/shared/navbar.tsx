@@ -4,6 +4,8 @@ import NavItems from "./nav-items";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 
+const PRODUCT_LINK = process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK!;
+
 const Navbar = () => {
   return (
     <div className="fixed right-0 left-0 top-0 z-10 shadow-sm w-full bg-[#F9FBF4]">
@@ -13,7 +15,8 @@ const Navbar = () => {
           <NavItems />
         </div>
         <Link
-          href={"/"}
+        target="_blank"
+          href={PRODUCT_LINK}
           className="text-white font-medium bg-green4 rounded-md py-2 px-6 md:flex w-fit items-center hidden"
         >
           Shop Now

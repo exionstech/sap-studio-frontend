@@ -64,23 +64,22 @@ interface PlantSignalComponentProps {
   className?: string;
 }
 
-const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
+const PlantSignalComponent = ({
   className,
 }: PlantSignalComponentProps) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [showSkeleton, setShowSkeleton] = useState(true);
+  const [imageHeight, setImageHeight] = useState<number>(0);
 
   const handleAccordionClick = (index: number): void => {
     setActiveIndex(index);
-    setShowSkeleton(true); // Show skeleton when changing images
+    setShowSkeleton(true);
     
-    // Reset skeleton after 1 second
     setTimeout(() => {
       setShowSkeleton(false);
     }, 500);
   };
 
-  // Initial load skeleton
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSkeleton(false);
@@ -89,10 +88,30 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const updateImageHeight = () => {
+      const width = window.innerWidth;
+      if (width < 1024) {
+        const imageContainer = document.querySelector('.image-container');
+        if (imageContainer) {
+          const containerWidth = imageContainer.clientWidth;
+          setImageHeight(containerWidth * (4/3));
+        }
+      } else {
+        setImageHeight(0);
+      }
+    };
+
+    updateImageHeight();
+    window.addEventListener('resize', updateImageHeight);
+    
+    return () => window.removeEventListener('resize', updateImageHeight);
+  }, []);
+
   return (
     <div
       className={cn(
-        "flex flex-col-reverse lg:flex-row gap-8 w-full mx-auto items-stretch",
+        "flex flex-col-reverse lg:flex-row gap-8 w-full mx-auto items-stretch 2xl:aspect-[5/2]",
         className
       )}
     >
@@ -136,19 +155,22 @@ const PlantSignalComponent: React.FC<PlantSignalComponentProps> = ({
         ))}
       </div>
 
-      <div className="w-full lg:w-[35%] relative rounded-lg overflow-hidden">
+      <div 
+        className="image-container w-full lg:w-[35%] relative rounded-lg overflow-hidden"
+        style={{ height: imageHeight || 'auto' }}
+      >
         {showSkeleton ? (
-          <div className="relative w-full h-full">
-          <Skeleton className="w-full h-full 2xl:aspect-[4/5] animate-pulse bg-green1/30" />
-            <Loader className="w-8 h-8 text-green4 animate-spin absolute top-1/2 right-1/2" />
-        </div>
+          <div className="absolute inset-0 flex items-center justify-center bg-green1/30">
+            <Skeleton className="absolute inset-0 animate-pulse" />
+            <Loader className="w-8 h-8 text-green4 animate-spin z-10" />
+          </div>
         ) : (
           <Image
             src={accordionData[activeIndex].image}
             alt={accordionData[activeIndex].title}
             width={300}
             height={300}
-            className="object-cover w-full h-full 2xl:aspect-[4/5] shrink-0 overflow-hidden select-none pointer-events-none"
+            className="object-cover w-full h-full shrink-0 overflow-hidden select-none pointer-events-none"
             priority
           />
         )}

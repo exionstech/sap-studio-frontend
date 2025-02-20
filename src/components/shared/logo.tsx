@@ -14,9 +14,9 @@ const Logo = (
         <Image
             src="/logo.svg"
             alt="logo"
-            width={55}
-            height={55}
-            className="shrink-0"
+            width={60}
+            height={60}
+            className="shrink-0 w-[4.3rem]"
         />
     </Link>
   )

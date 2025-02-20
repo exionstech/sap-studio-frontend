@@ -2,14 +2,25 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
+
+const PRODUCT_LINK = process.env.NEXT_PUBLIC_PRODUCT_DETAILS_LINK!;
 
 const LandingHero = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
 
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setShowSkeleton(false);
+      }, 500);
+  
+      return () => clearTimeout(timer);
+    }, []);
+
   return (
-    <div className="w-full max-w-screen-2xl 2xl:aspect-[5/2] 2xl:items-center 2xl:justify-center mx-auto px-5 md:px-14 flex md:flex-row flex-col gap-5 pt-10">
-      <div className="w-full lg:w-[50%] md:w-[60%] flex flex-col gap-10 md:mt-10 2xl:mt-24">
+    <div className="w-full max-w-screen-2xl 2xl:aspect-[5/2] mx-auto px-5 md:px-14 flex md:flex-row flex-col gap-5 pt-10">
+      <div className="w-full lg:w-[50%] md:w-[60%] flex flex-col gap-10 md:mt-10 2xl:mt-14">
         <h1 className="font-larken-demo text-5xl lg:text-6xl select-none pointer-events-none">
           Decode Nature&apos;s <br /> Secret <span className="text-green3">Symphony</span>
         </h1>
@@ -17,17 +28,21 @@ const LandingHero = () => {
           <p className="w-[90%] select-none pointer-events-none">
             Nature has always been singing—we just weren&apos;t listening. At Sap Symphony, we transform plant signals into mesmerizing soundscapes, unveiling the unseen rhythm of life. Step into a world where leaves whisper, roots hum, and the earth composes its own melody.
           </p>
-          <Button className="w-fit hover:text-white">Learn More</Button>
+          <Link href={PRODUCT_LINK} target="_blank">
+            <Button className="w-fit hover:text-white transition">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="w-full lg:w-[50%] md:w-[40%] flex items-end md:pt-[3.5rem] justify-end">
         {showSkeleton ? (
           <>
             <div className="2xl:hidden">
-              <Skeleton className="w-[400px] h-[400px] rounded-md animate-pulse bg-green1/20" />
+              <Skeleton className="w-[400px] h-[400px] rounded-md animate-pulse bg-green1/25" />
             </div>
             <div className="hidden 2xl:block">
-              <Skeleton className="w-[500px] h-[500px] rounded-md animate-pulse bg-green1/20" />
+              <Skeleton className="w-[500px] h-[500px] rounded-md animate-pulse bg-green1/25" />
             </div>
           </>
         ) : (
